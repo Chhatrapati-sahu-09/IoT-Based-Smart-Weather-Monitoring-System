@@ -1,144 +1,116 @@
-# Getting Started
 
-Follow these steps to build and run your own IoT-Based Smart Weather Monitoring System:
+  # IoT-Based Smart Weather Monitoring System
 
-## 1. Hardware Setup
+  ## Abstract
 
-- Connect the DHT11 sensor to the ESP32 (VCC, GND, and data pin to a digital GPIO).
-- Connect the 16×2 I2C LCD to the ESP32 (SDA, SCL, VCC, GND).
-- Use a breadboard and jumper wires for connections.
-- Power the ESP32 using a USB cable and 5V supply.
+  The IoT-Based Smart Weather Monitoring System measures indoor temperature and humidity using a DHT11 sensor and retrieves real-time outdoor weather data from the OpenWeatherMap API via WiFi. An ESP32 microcontroller processes and displays this information on a 16×2 I2C LCD in a rotating format. The project demonstrates practical IoT concepts including sensor integration, cloud communication, API handling, and real-time data visualization.
 
-## 2. Software Setup
+  <!-- Images from .vscode/images -->
+  ![System Image 1](.vscode/images/image.png)
+  ![Screenshot 1](.vscode/images/Screenshot%202025-12-18%20185006.png)
+  ![Screenshot 2](.vscode/images/Screenshot%202025-12-18%20185344.png)
 
-- Install the Arduino IDE on your computer.
-- Add the ESP32 board package to the Arduino IDE (via Board Manager).
-- Install the required libraries:
-  - WiFi.h
-  - HTTPClient.h
-  - ArduinoJson.h
-  - LiquidCrystal_I2C.h
-  - DHT.h
+  ## Features
 
-## 3. Configuration
+  - Real-time indoor temperature and humidity monitoring
+  - Live outdoor weather data using OpenWeatherMap API
+  - Automatic LCD screen rotation showing Indoor Weather, Outdoor Weather, and Network Status
+  - WiFi connectivity with status indication
+  - Low-power and compact IoT solution
+  - Continuous and stable operation
 
-- Open the `sketch_nov29a.ino` file in Arduino IDE.
-- Enter your WiFi SSID and password in the code:
-  - `const char* ssid = "YOUR_WIFI_NAME";`
-  - `const char* password = "YOUR_WIFI_PASSWORD";`
-- Enter your OpenWeatherMap API key:
-  - `const String apiKey = "YOUR_API_KEY";`
-- Set your city name and (optionally) country code.
+  ## Hardware Requirements
 
-## 4. Upload and Run
+  - ESP32 Development Board
+  - DHT11 Temperature and Humidity Sensor
+  - 16×2 I2C LCD Display
+  - Breadboard and Jumper Wires
+  - USB Cable and 5V Power Supply
 
-- Select the correct ESP32 board and COM port in Arduino IDE.
-- Upload the code to your ESP32.
-- Open the Serial Monitor to view debug output.
-- The LCD will display indoor weather, outdoor weather, and network status in rotation.
+  ## Software Requirements
 
-## 5. Troubleshooting
+  - Arduino IDE
+  - ESP32 Board Package
+  - Required Libraries:
+    - WiFi.h
+    - HTTPClient.h
+    - ArduinoJson.h
+    - LiquidCrystal_I2C.h
+    - DHT.h
+  - OpenWeatherMap API Key
+  - Serial Monitor (for debugging)
 
-- Ensure all hardware connections are secure.
-- Double-check WiFi credentials and API key.
-- Use Serial Monitor for debugging any issues.
+  ## System Architecture
 
-For further help, refer to the comments in the code and the documentation of the required libraries.
-# IoT-Based Smart Weather Monitoring System
+  - Sensing Layer: DHT11 sensor captures indoor temperature and humidity
+  - Processing Layer: ESP32 processes sensor readings and API responses
+  - Communication Layer: WiFi communication with OpenWeatherMap API
+  - Application Layer: 16×2 I2C LCD displays weather and network status
 
-[![Arduino](https://img.shields.io/badge/platform-Arduino-blue.svg)](https://www.arduino.cc/) [![ESP32](https://img.shields.io/badge/board-ESP32-green.svg)](https://www.espressif.com/en/products/socs/esp32) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ### Data Flow
 
-## Introduction
+  DHT11 → ESP32 → WiFi → OpenWeatherMap API → ESP32 → LCD Display
 
-The rapid advancement of the Internet of Things (IoT) has enabled real-time monitoring and automation of environmental parameters. Weather monitoring is one of the most widely adopted IoT applications due to its importance in daily decision-making, comfort management, and environmental awareness.
+  ## Getting Started
 
-This project integrates on-device sensor data with cloud-based weather services to provide a dual-perspective analysis of environmental conditions. Indoor temperature and humidity are measured using a DHT11 sensor, while real-time outdoor weather data is fetched from the OpenWeatherMap API using WiFi connectivity through an ESP32 microcontroller. All collected data is displayed on a 16×2 I2C LCD, which rotates automatically between indoor weather, outdoor weather, and network/connectivity status.
+  ### Hardware Setup
 
-The system offers a compact, real-time, and user-friendly solution while demonstrating core IoT concepts such as sensor integration, microcontroller programming, API communication, and real-time data visualization.
+  - Connect DHT11 sensor to ESP32 (VCC, GND, Data → GPIO pin)
+  - Connect 16×2 I2C LCD (SDA, SCL, VCC, GND)
+  - Use breadboard and jumper wires
+  - Power ESP32 using USB cable
 
-## Requirement Analysis and System Specification
+  ### Software Setup
 
-### Hardware Requirements
-- ESP32 Development Board
-- DHT11 Temperature and Humidity Sensor
-- 16×2 I2C LCD Display
-- Breadboard and Jumper Wires
-- USB Cable and 5V Power Supply
+  - Install Arduino IDE
+  - Add ESP32 Board Package via Board Manager
+  - Install required libraries listed above
 
-### Software Requirements
-- Arduino IDE
-- ESP32 Board Package
-- Required Libraries:
-  - WiFi.h
-  - HTTPClient.h
-  - ArduinoJson.h
-  - LiquidCrystal_I2C.h
-  - DHT.h
-- OpenWeatherMap API Key
-- Serial Monitor for debugging
+  ### Configuration
 
-### Functional Specifications
-- Measure indoor temperature and humidity using DHT11 sensor
-- Fetch outdoor temperature, humidity, and weather conditions via OpenWeatherMap API
-- Display information on a 16×2 I2C LCD with automatic screen rotation
-- Indicate WiFi connectivity and network status
-- Provide continuous and real-time monitoring
+  - Open `sketch_nov29a.ino` and update the following:
+    - `const char* ssid = "YOUR_WIFI_NAME";`
+    - `const char* password = "YOUR_WIFI_PASSWORD";`
+    - `const String apiKey = "YOUR_OPENWEATHERMAP_API_KEY";`
+    - `const String city = "YOUR_CITY_NAME";`
 
-### Non-Functional Specifications
-- System must operate continuously (24/7 stability)
-- Low power consumption using ESP32
-- Accurate and real-time data acquisition
-- Simple user interface and easy maintenance
+  ### Upload and Run
 
-## System Design
+  - Select correct ESP32 board and COM port
+  - Upload the code
+  - Open the Serial Monitor (115200 baud)
+  - The LCD will rotate between Indoor Weather, Outdoor Weather, and Network Status
 
-### System Architecture
-- **Sensing Layer:** DHT11 sensor captures indoor temperature and humidity
-- **Processing Layer:** ESP32 processes sensor data and API responses
-- **Communication Layer:** ESP32 connects to WiFi and communicates with OpenWeatherMap API
-- **Application Layer:** 16×2 I2C LCD displays indoor weather, outdoor weather, and network status
+  ## Testing
 
-### Data Flow
-1. DHT11 sends temperature and humidity data to ESP32
-2. ESP32 sends an HTTP GET request to OpenWeatherMap API
-3. API returns weather data in JSON format
-4. ESP32 parses required values using ArduinoJson library
-5. LCD displays data in rotating sequence: Indoor Weather → Outdoor Weather → Network Status
+  - Verify DHT11 readings with a standard thermometer/hygrometer
+  - Validate API responses via Serial Monitor
+  - Test WiFi connectivity under different signal strengths
+  - Confirm LCD readability and smooth transitions
 
-### System Diagram
+  ## Maintenance
 
-```
-DHT11 → ESP32 → WiFi → OpenWeatherMap API → ESP32 → LCD Display
-```
+  - Replace DHT11 sensor if accuracy degrades
+  - Update OpenWeatherMap API key when required
+  - Modify WiFi credentials if network changes
+  - Modular code structure allows easy upgrades
 
-## Implementation, Testing, and Maintenance
+  ## Results and Discussion
 
-### Implementation
-- ESP32 programmed using Arduino IDE
-- WiFi credentials and API key configured within the source code
-- DHT11 connected to a digital GPIO pin
-- LCD interfaced using I2C protocol
-- JSON data parsed using ArduinoJson library
-- Rotating LCD display implemented using time-based switching logic
+  The system successfully displays both indoor and outdoor weather conditions in real time. The rotating LCD interface ensures clarity without user interaction. By comparing indoor and outdoor data, users can better understand comfort levels, ventilation needs, and environmental conditions. The ESP32 provides reliable performance and efficient IoT-cloud communication.
 
-### Testing
-- Sensor readings validated by comparison with standard thermometer and hygrometer
-- API responses verified through Serial Monitor for correct JSON parsing
-- WiFi connectivity tested under varying signal strengths
-- LCD display tested for readability and smooth screen transitions
+  ## Security Note
 
-### Maintenance
-- Replace DHT11 sensor if measurement accuracy degrades
-- Update API key when expired
-- Modify WiFi credentials if network changes
-- Modular code structure supports easy debugging and future upgrades
+  For public repositories, WiFi credentials and API keys should be treated as sensitive data. Replace actual values with placeholders before pushing to GitHub.
 
-## Results and Discussion
+  ## Conclusion
 
-The developed system successfully measures indoor temperature and humidity while simultaneously retrieving real-time outdoor weather data from the OpenWeatherMap API. The rotating LCD display provides clear and organized visualization of environmental conditions.
+  The IoT-Based Smart Weather Monitoring System effectively combines sensor data and cloud-based weather services to deliver accurate, real-time environmental insights. It serves as a practical demonstration of IoT principles and can be extended for smart home or environmental monitoring applications.
 
-By comparing indoor and outdoor data, users can assess heat retention, ventilation needs, and comfort levels. The integration of cloud-based weather data demonstrates efficient IoT-cloud communication, while the ESP32 ensures reliable performance and continuous operation.
+  ## License
 
-## Conclusion
+  This project is licensed under the MIT License.
 
-The IoT-Based Smart Weather Monitoring System effectively combines sensor data and cloud services to deliver accurate, real-time environmental insights, making it a practical and scalable IoT solution.
+  ## Author
+
+  Chhatrapati Sahu
