@@ -4,9 +4,12 @@
 ![ESP32](https://img.shields.io/badge/ESP32-323330?style=flat)
 ![IoT](https://img.shields.io/badge/IoT-0A1AFF?style=flat)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![GitHub stars](https://img.shields.io/github/stars/USERNAME/REPO?style=flat)
-![GitHub forks](https://img.shields.io/github/forks/USERNAME/REPO?style=flat)
-![GitHub issues](https://img.shields.io/github/issues/USERNAME/REPO)
+![GitHub stars](https://img.shields.io/github/stars/Chhatrapati-sahu-09/IoT-Based-Smart-Weather-Monitoring-System?style=flat)
+![GitHub forks](https://img.shields.io/github/forks/Chhatrapati-sahu-09/IoT-Based-Smart-Weather-Monitoring-System?style=flat)
+![GitHub issues](https://img.shields.io/github/issues/Chhatrapati-sahu-09/IoT-Based-Smart-Weather-Monitoring-System)
+![Last Commit](https://img.shields.io/github/last-commit/Chhatrapati-sahu-09/IoT-Based-Smart-Weather-Monitoring-System)
+![Repo Size](https://img.shields.io/github/repo-size/Chhatrapati-sahu-09/IoT-Based-Smart-Weather-Monitoring-System)
+
 
 
 
