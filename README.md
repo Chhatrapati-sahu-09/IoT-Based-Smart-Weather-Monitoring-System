@@ -1,14 +1,20 @@
 
   # IoT-Based Smart Weather Monitoring System
+  ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-323330?style=flat)
+![IoT](https://img.shields.io/badge/IoT-0A1AFF?style=flat)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/USERNAME/REPO?style=flat)
+![GitHub forks](https://img.shields.io/github/forks/USERNAME/REPO?style=flat)
+![GitHub issues](https://img.shields.io/github/issues/USERNAME/REPO)
+
+
 
   ## Abstract
 
   The IoT-Based Smart Weather Monitoring System measures indoor temperature and humidity using a DHT11 sensor and retrieves real-time outdoor weather data from the OpenWeatherMap API via WiFi. An ESP32 microcontroller processes and displays this information on a 16×2 I2C LCD in a rotating format. The project demonstrates practical IoT concepts including sensor integration, cloud communication, API handling, and real-time data visualization.
 
-  <!-- Images from .vscode/images -->
-  ![System Image 1](.vscode/images/image.png)
-  ![Screenshot 1](.vscode/images/Screenshot%202025-12-18%20185006.png)
-  ![Screenshot 2](.vscode/images/Screenshot%202025-12-18%20185344.png)
+  
 
   ## Features
 
@@ -114,3 +120,8 @@
   ## Author
 
   Chhatrapati Sahu
+
+  <!-- Images from .vscode/images -->
+  ![System Image 1](.vscode/images/image.png)
+  ![Screenshot 1](.vscode/images/Screenshot%202025-12-18%20185006.png)
+  ![Screenshot 2](.vscode/images/Screenshot%202025-12-18%20185344.png)
