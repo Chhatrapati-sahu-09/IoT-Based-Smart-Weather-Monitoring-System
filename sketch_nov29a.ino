@@ -16,11 +16,13 @@ DHT dht(DHT_PIN, DHT_TYPE);
 
 // WiFi Credentials
 const char* ssid = "HP14S 5420";
-const char* password = "?b83033T";
+const char* ssid = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // OpenWeatherMap API - TEST WITH SIMPLE CITY
-const String apiKey = "ed72f0a7a3d63f3d342a4771639caeda";
+const String apiKey = "YOUR_API_KEY";
 const String city = "Durg"; // Simple city name
+const String city = "YOUR_CITY";
 const String countryCode = "IN";
 String weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
 
