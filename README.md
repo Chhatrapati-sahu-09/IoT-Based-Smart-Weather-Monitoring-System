@@ -1,3 +1,49 @@
+# Getting Started
+
+Follow these steps to build and run your own IoT-Based Smart Weather Monitoring System:
+
+## 1. Hardware Setup
+
+- Connect the DHT11 sensor to the ESP32 (VCC, GND, and data pin to a digital GPIO).
+- Connect the 16×2 I2C LCD to the ESP32 (SDA, SCL, VCC, GND).
+- Use a breadboard and jumper wires for connections.
+- Power the ESP32 using a USB cable and 5V supply.
+
+## 2. Software Setup
+
+- Install the Arduino IDE on your computer.
+- Add the ESP32 board package to the Arduino IDE (via Board Manager).
+- Install the required libraries:
+  - WiFi.h
+  - HTTPClient.h
+  - ArduinoJson.h
+  - LiquidCrystal_I2C.h
+  - DHT.h
+
+## 3. Configuration
+
+- Open the `sketch_nov29a.ino` file in Arduino IDE.
+- Enter your WiFi SSID and password in the code:
+  - `const char* ssid = "YOUR_WIFI_NAME";`
+  - `const char* password = "YOUR_WIFI_PASSWORD";`
+- Enter your OpenWeatherMap API key:
+  - `const String apiKey = "YOUR_API_KEY";`
+- Set your city name and (optionally) country code.
+
+## 4. Upload and Run
+
+- Select the correct ESP32 board and COM port in Arduino IDE.
+- Upload the code to your ESP32.
+- Open the Serial Monitor to view debug output.
+- The LCD will display indoor weather, outdoor weather, and network status in rotation.
+
+## 5. Troubleshooting
+
+- Ensure all hardware connections are secure.
+- Double-check WiFi credentials and API key.
+- Use Serial Monitor for debugging any issues.
+
+For further help, refer to the comments in the code and the documentation of the required libraries.
 # IoT-Based Smart Weather Monitoring System
 
 [![Arduino](https://img.shields.io/badge/platform-Arduino-blue.svg)](https://www.arduino.cc/) [![ESP32](https://img.shields.io/badge/board-ESP32-green.svg)](https://www.espressif.com/en/products/socs/esp32) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
